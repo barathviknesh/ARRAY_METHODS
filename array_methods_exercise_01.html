@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array methods ex1</title>
+</head>
+<body>
+    <script>
+        const people = [
+    { firstName: 'Sam', lastName: 'Hughes', DOB: '07/07/1978', department: 'Development', salary: "10" },
+    { firstName: 'Terri', lastName: 'Bishop', DOB: '02/04/1989', department: 'Development', salary: "10"},
+    { firstName: 'Jar', lastName: 'Burke', DOB: '11/01/1985', department: 'Marketing', salary: "10"},
+    { firstName: 'Julio', lastName: 'Miller', DOB: '12/07/1991', department: 'Sales', salary: "10" },
+    { firstName: 'Chester', lastName: 'Flores', DOB: '03/15/1988', department: 'Development', salary: "10" },
+    { firstName: 'Madison', lastName: 'Marshall', DOB: '09/22/1980', department: 'Sales', salary: "10" },
+    { firstName: 'Ava', lastName: 'Pena', DOB: '11/02/1986', department: 'Development', salary: "10" },
+    { firstName: 'Gabriella', lastName: 'Steward', DOB: '08/26/1994', department: 'Marketing', salary: "10" },
+    { firstName: 'Charles', lastName: 'Campbell', DOB: '09/04/1977', department: 'Sales', salary: "10" },
+    { firstName: 'Tiffany', lastName: 'Lambert', DOB: '05/11/1990', department: 'Development', salary: "10" },
+    { firstName: 'Antonio', lastName: 'Gonzalez', DOB: '03/24/1985', department: 'Office Management', salary: "10" },
+    { firstName: 'Aaron', lastName: 'Garrett', DOB: '09/04/1985', department: 'Development', salary: "10" },
+];
+
+// Exercises
+
+// 1) What is the average income of all the people in the array?   
+
+// if the salary KEY : VALUE is in NUMBER use below method    salary: 10  <----number
+
+// const total = people.reduce((average_salary, current_salary)=> {
+
+//     console.log(average_salary,"average_salary");
+//     console.log(current_salary,"current_salary");
+   
+//     return current_salary.salary + average_salary;
+    
+// },0);
+//    const final_average = total/people.length
+
+//    console.log(total,"total");
+//    console.log(final_average,"final_average");
+
+
+   // if the salary KEY : VALUE is in STRING use below method    salary: "10"  <----STRING
+
+
+  
+const total = people.reduce((average_salary, current_salary)=> {
+
+    console.log(average_salary,"average_salary");
+    console.log(current_salary,"current_salary");
+   
+    return parseInt(current_salary.salary) + average_salary;  //add parseInt()
+    
+},0);
+   const final_average = total/people.length
+//total
+   console.log(total,"total");
+//average
+   console.log(final_average,"final_average");
+
+
+
+    
+    </script>
+</body>
+</html>
