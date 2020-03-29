@@ -62,6 +62,33 @@ const total = people.reduce((average_salary, current_salary)=> {
 
 
 
+   // 2) Who are the people that are currently older than 30?
+
+const senior = people.filter((age)=>{
+    return (new Date().getFullYear() - new Date(age.DOB).getFullYear() >30);
+});
+console.log(senior);
+
+
+ // 3) Get a list of the people's full name (firstName and lastName).
+
+ const names = people.map((name)=>{
+     return name.firstName+" "+name.lastName;
+
+ });
+ console.log(names,"names")
+
+ 
+// 4) Get a list of people in the array ordered from youngest to oldest.
+
+
+const asc = people.sort((age1,age2) => {
+    return (new Date(age1.DOB) - new Date(age2.DOB));
+});
+console.log(asc,"asc");
+
+// 5) How many people are there in each department?
+
     
     </script>
 </body>
