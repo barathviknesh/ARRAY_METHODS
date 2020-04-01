@@ -64,9 +64,16 @@ const which =
 
 // 4) Add the user's first and last name to each comment in the comments array
 
-
+const com = comments.map(comment => {
+    const {firstName, lastName} = users.find(user => user.id === comment.userId);
+    return {...comment, firstName, lastName}
+});
+console.log(com);
 
 // 5) Get a list of the users who haven't commented
+
+const notComment = users.filter(user=>!comments.find(comment=>comment.userId === user.id))
+console.log(notComment)
 </script>
 </body>
 </html>
